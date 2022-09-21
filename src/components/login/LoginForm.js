@@ -31,7 +31,13 @@ const LoginForm = ({ navigation }) => {
       >
         Quên mật khẩu
       </Text>
-      <Button title='Đăng nhập' style={styles.btn} onPress={() => {}} />
+      <Button
+        title='Đăng nhập'
+        style={styles.btn}
+        onPress={() => {
+          navigation.push('Dashboard')
+        }}
+      />
       <Text style={{ marginTop: 50, textAlign: 'center' }}>
         <Text>Bạn chưa có tài khoản Tindi?</Text>
         <Text

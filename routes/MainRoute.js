@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
 import ForgetPasswordScreen from '../screens/ForgetPasswordScreen'
+import DashboardScreen from '../screens/DashboardScreen'
 
 const Root = createStackNavigator()
 
@@ -18,6 +19,7 @@ const MainRoute = () => {
         <Root.Screen name='Login' component={LoginScreen} />
         <Root.Screen name='Register' component={RegisterScreen} />
         <Root.Screen name='ForgetPassword' component={ForgetPasswordScreen} />
+        <Root.Screen name='Dashboard' component={DashboardScreen} />
       </Root.Navigator>
     </NavigationContainer>
   )

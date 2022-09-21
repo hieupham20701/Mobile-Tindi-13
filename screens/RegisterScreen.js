@@ -1,24 +1,27 @@
-import { ImageBackground, StyleSheet, Text, View } from 'react-native'
+import { ImageBackground, Keyboard, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import RegisterHeader from '../src/components/register/RegisterHeader'
 import RegisterForm from '../src/components/register/RegisterForm'
 import RegisterBgr from '../assets/register-bgr.jpg'
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
 
 const RegisterScreen = ({ navigation, route }) => {
   return (
-    <View style={styles.container}>
-      <View style={{ height: '100%', width: '100%', position: 'relative' }}>
-        <ImageBackground
-          source={RegisterBgr}
-          resizeMode='cover'
-          style={{ flex: 1, height: '100%' }}
-        ></ImageBackground>
-        <View style={styles.main}>
-          <RegisterHeader />
-          <RegisterForm navigation={navigation} />
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={styles.container}>
+        <View style={{ height: '100%', width: '100%', position: 'relative' }}>
+          <ImageBackground
+            source={RegisterBgr}
+            resizeMode='cover'
+            style={{ flex: 1, height: '100%' }}
+          ></ImageBackground>
+          <View style={styles.main}>
+            <RegisterHeader />
+            <RegisterForm navigation={navigation} />
+          </View>
         </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   )
 }
 
